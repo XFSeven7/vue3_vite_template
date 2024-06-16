@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1 style="text-align: center">This is an home page</h1>
+    <div style="padding: 12px;display: flex;flex-wrap: wrap">
+      <div v-for="item in 30" class="frame_1">{{item}}</div>
+    </div>
   </div>
 </template>
 
@@ -21,3 +24,17 @@ onMounted(() => {
 
 })
 </script>
+
+<style scoped>
+.frame_1 {
+  line-height: 180px;
+  text-align: center;
+  font-size: 50px;
+  color: var(--theme);
+  margin: 8px;
+  width: 160px;
+  height: 180px;
+  border-radius: 8px;
+  background-color: rgb(178, 223, 220);
+}
+</style>
