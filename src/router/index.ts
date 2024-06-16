@@ -19,7 +19,11 @@ const routes: Array<RouteRecordRaw> = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  // 每次路由切换，页面回到顶部
+  scrollBehavior() {
+    return { top: 0 };
+  }
 })
 
 export default router
