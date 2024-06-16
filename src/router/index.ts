@@ -6,14 +6,21 @@ const routes: Array<RouteRecordRaw> = [
     redirect: { name: "home" }
   },
   {
-    path: '/',
-    name: 'home',
-    component: () => import("@/views/HomeView.vue")
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: () => import("@/views/AboutView.vue")
+    path:"/",
+    name: 'default',
+    component: () => import("@/layout/default_layout.vue"),
+    children:[
+      {
+        path: '/',
+        name: 'home',
+        component: () => import("@/views/HomeView.vue")
+      },
+      {
+        path: '/about',
+        name: 'about',
+        component: () => import("@/views/AboutView.vue")
+      }
+    ]
   }
 ]
 
