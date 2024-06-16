@@ -1,4 +1,5 @@
 import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
+import {Page} from "@/router/Page";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -12,13 +13,18 @@ const routes: Array<RouteRecordRaw> = [
     children:[
       {
         path: '/home',
-        name: 'home',
-        component: () => import("@/views/HomeView.vue")
+        name: Page.home,
+        component: () => import("@/views/home/HomeView.vue")
       },
       {
         path: '/about',
-        name: 'about',
+        name: Page.about,
         component: () => import("@/views/AboutView.vue")
+      },
+      {
+        path: '/mine',
+        name: Page.mine,
+        component: () => import("@/views/mine/MineView.vue")
       }
     ]
   }
