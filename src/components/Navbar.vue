@@ -37,15 +37,15 @@ function switchIndex(index: number) {
   position: absolute;
   display: flex;
   width: 100%;
-  height: 44px;
+  height: 44rem;
   justify-content: center;
   background: #daf3da
 }
 
 .nav_item {
   line-height: 100%;
-  font-size: 22px;
-  margin: 10px;
+  font-size: 22rem;
+  margin: 10rem;
   cursor: pointer;
 }
 

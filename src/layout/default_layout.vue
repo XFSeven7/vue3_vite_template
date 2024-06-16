@@ -1,7 +1,7 @@
 <template>
   <div style="position: relative">
     <navbar />
-    <page_layout style="padding-top: 44px"/>
+    <page_layout style="padding-top: 44rem"/>
     <navbar-bottom></navbar-bottom>
   </div>
 </template>

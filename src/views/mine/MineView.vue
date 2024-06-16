@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="text-align: center">This is an mine page</h1>
+    <div style="text-align: center;font-size: 22rem">This is an mine page</div>
   </div>
 </template>
 

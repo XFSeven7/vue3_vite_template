@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1 style="text-align: center">This is an home page</h1>
-    <div style="padding: 12px;display: flex;flex-wrap: wrap">
+    <div style="text-align: center;font-size: 22rem">This is an home page</div>
+    <div style="padding: 12rem;display: flex;flex-wrap: wrap">
       <div v-for="item in 30" class="frame_1">{{item}}</div>
     </div>
   </div>
@@ -27,14 +27,14 @@ onMounted(() => {
 
 <style scoped>
 .frame_1 {
-  line-height: 180px;
+  line-height: 180rem;
   text-align: center;
-  font-size: 50px;
+  font-size: 50rem;
   color: var(--theme);
-  margin: 8px;
-  width: 160px;
-  height: 180px;
-  border-radius: 8px;
+  margin: 8rem;
+  width: 150rem;
+  height: 180rem;
+  border-radius: 8rem;
   background-color: rgb(178, 223, 220);
 }
 </style>
