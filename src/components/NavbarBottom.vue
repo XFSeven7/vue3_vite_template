@@ -1,15 +1,15 @@
 <template>
 
   <div class="content">
-    <div class="nav_item click" :class="{nav_item_active:currItem==0}" @click="switchIndex(0)">
+    <div class="nav_item click" :class="{nav_item_active:navIndex==0}" @click="switchIndex(0)">
       <img src="@/assets/images/logo.png" style="width: 24px;height: 24px"/>
       <div>home</div>
     </div>
-    <div class="nav_item click" :class="{nav_item_active:currItem==1}" @click="switchIndex(1)">
+    <div class="nav_item click" :class="{nav_item_active:navIndex==1}" @click="switchIndex(1)">
       <img src="@/assets/images/logo.png" style="width: 24px;height: 24px"/>
       <div>about</div>
     </div>
-    <div class="nav_item click" :class="{nav_item_active:currItem==2}" @click="switchIndex(2)">
+    <div class="nav_item click" :class="{nav_item_active:navIndex==2}" @click="switchIndex(2)">
       <img src="@/assets/images/logo.png" style="width: 24px;height: 24px"/>
       <div>mine</div>
     </div>
@@ -19,18 +19,21 @@
 
 <script setup lang="ts">
 
-import {ref} from "vue";
 import {Page, pageJump} from "@/router/Page";
+import {useTestStore} from "@/store/app/testStore";
+import {storeToRefs} from "pinia";
 
-const currItem = ref(0);
+const useTest = useTestStore();
+
+const {navIndex} = storeToRefs(useTest);
 
 function switchIndex(index: number) {
-  currItem.value = index;
-  if (currItem.value == 0) {
+  navIndex.value = index;
+  if (navIndex.value == 0) {
     pageJump(Page.home);
-  } else if (currItem.value == 1) {
+  } else if (navIndex.value == 1) {
     pageJump(Page.about);
-  } else if (currItem.value == 2) {
+  } else if (navIndex.value == 2) {
     pageJump(Page.mine);
   }
 }
