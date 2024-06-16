@@ -10,8 +10,8 @@ app.use(router);
 app.use(pinia);
 app.mount('#app');
 
-// let designWidth = 1920;// 电脑设计稿宽度
-let designWidth = 375;// 手机设计稿宽度
+let designWidth = 1920;// 电脑设计稿宽度
+// let designWidth = 375;// 手机设计稿宽度
 
 // 设置 rem 函数
 function setRem() {
