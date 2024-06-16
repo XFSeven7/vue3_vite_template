@@ -1,6 +1,6 @@
 <template>
 
-  <div style="display: flex;margin: auto;justify-content: center;background: #daf3da">
+  <div class="content">
     <div class="nav_item click" :class="{nav_item_active:currItem==0}" @click="switchIndex(0)">home</div>
     <div class="nav_item click" :class="{nav_item_active:currItem==1}" @click="switchIndex(1)">about</div>
     <div class="nav_item click" :class="{nav_item_active:currItem==2}" @click="switchIndex(2)">mine</div>
@@ -30,7 +30,17 @@ function switchIndex(index: number) {
 
 <style scoped>
 
+.content {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 44px;
+  justify-content: center;
+  background: #daf3da
+}
+
 .nav_item {
+  line-height: 100%;
   font-size: 22px;
   margin: 10px;
   cursor: pointer;

@@ -1,7 +1,8 @@
 <template>
   <div style="position: relative">
     <navbar />
-    <page_layout />
+    <page_layout style="padding-top: 44px"/>
+    <navbar-bottom></navbar-bottom>
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 
 import Navbar from "@/components/Navbar.vue";
 import Page_layout from "@/layout/page_layout.vue";
+import NavbarBottom from "@/components/NavbarBottom.vue";
 </script>
 
 <style scoped>
