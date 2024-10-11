@@ -14,17 +14,17 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/home',
         name: Page.home,
-        component: () => import("@/views/home/HomeView.vue")
+        component: () => import("@/views/home/index.vue")
       },
       {
         path: '/about',
         name: Page.about,
-        component: () => import("@/views/about/AboutView.vue")
+        component: () => import("@/views/about/index.vue")
       },
       {
         path: '/mine',
         name: Page.mine,
-        component: () => import("@/views/mine/MineView.vue")
+        component: () => import("@/views/mine/index.vue")
       }
     ]
   }

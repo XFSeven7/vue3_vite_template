@@ -2,12 +2,13 @@
   <div>
     <div style="text-align: center;font-size: 22rem">This is an home page</div>
     <div style="padding: 12rem;display: flex;flex-wrap: wrap">
-      <div v-for="item in 30" class="frame_1">{{item}}</div>
+      <div v-for="item in 30" class="frame_1">{{ item }}</div>
     </div>
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+
 import {onMounted} from "vue";
 import {getData} from "@/api/home";
 
@@ -23,6 +24,7 @@ onMounted(() => {
   });
 
 })
+
 </script>
 
 <style scoped>
